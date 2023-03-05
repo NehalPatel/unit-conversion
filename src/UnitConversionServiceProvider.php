@@ -2,9 +2,9 @@
 
 namespace NehalPatel\UnitConversion;
 
+use NehalPatel\UnitConversion\Commands\UnitConversionCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use NehalPatel\UnitConversion\Commands\UnitConversionCommand;
 
 class UnitConversionServiceProvider extends PackageServiceProvider
 {

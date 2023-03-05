@@ -3,8 +3,8 @@
 namespace NehalPatel\UnitConversion\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use NehalPatel\UnitConversion\UnitConversionServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
