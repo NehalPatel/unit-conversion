@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace NehalPatel\UnitConversion\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class UnitConversionCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'unit-conversion';
 
     public $description = 'My command';
 
