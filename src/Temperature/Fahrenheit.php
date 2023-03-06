@@ -16,29 +16,37 @@ class Fahrenheit extends TemperatureConverter implements Convertable
 
     /**
      * Convert from Fahrenheit to Celsius
+     *
      * @return $this
+     *
      * @throws MissingConversionUnitException
      */
     public function toCelsius(): self
     {
-        if (!isset($this->fahrenheit))
+        if (! isset($this->fahrenheit)) {
             throw new MissingConversionUnitException();
+        }
 
         $this->temperature = ($this->fahrenheit - 32) / 1.8;
+
         return $this;
     }
 
     /**
      * Convert from Fahrenheit to Kelvin
+     *
      * @return $this
+     *
      * @throws MissingConversionUnitException
      */
     public function toKelvin(): self
     {
-        if (!isset($this->fahrenheit))
+        if (! isset($this->fahrenheit)) {
             throw new MissingConversionUnitException();
+        }
 
         $this->temperature = ($this->fahrenheit + 459.67) * 5 / 9;
+
         return $this;
     }
 }

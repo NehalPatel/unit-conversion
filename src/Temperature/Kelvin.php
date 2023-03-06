@@ -16,29 +16,37 @@ class Kelvin extends TemperatureConverter implements Convertable
 
     /**
      * Convert from Kelvin to Celsius
+     *
      * @return $this
+     *
      * @throws MissingConversionUnitException
      */
     public function toCelsius(): self
     {
-        if (!isset($this->kelvin))
+        if (! isset($this->kelvin)) {
             throw new MissingConversionUnitException();
+        }
 
         $this->temperature = $this->kelvin - 273.15;
+
         return $this;
     }
 
     /**
      * Convert from Kelvin to Fahrenheit
+     *
      * @return $this
+     *
      * @throws MissingConversionUnitException
      */
     public function toFahrenheit(): self
     {
-        if (!isset($this->kelvin))
+        if (! isset($this->kelvin)) {
             throw new MissingConversionUnitException();
+        }
 
-        $this->temperature = ($this->kelvin - 273.15) * 9/5 + 32;
+        $this->temperature = ($this->kelvin - 273.15) * 9 / 5 + 32;
+
         return $this;
     }
 }
