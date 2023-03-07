@@ -50,7 +50,7 @@ class Kilogram extends WeightConverter implements Convertable
             throw new MissingConversionUnitException();
         }
 
-        $this->weight = $this->kilogram *1000000;
+        $this->weight = $this->kilogram * 1000000;
 
         return $this;
     }
