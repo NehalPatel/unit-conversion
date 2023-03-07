@@ -14,6 +14,11 @@ class Kelvin extends TemperatureConverter implements Convertable
         $this->kelvin = $kelvin;
     }
 
+    public static function from(float $kelvin): Kelvin
+    {
+        return new self($kelvin);
+    }
+
     /**
      * Convert from Kelvin to Celsius
      *

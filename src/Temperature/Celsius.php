@@ -14,6 +14,11 @@ class Celsius extends TemperatureConverter implements Convertable
         $this->celsius = $celsius;
     }
 
+    public static function from(float $celsius): Celsius
+    {
+        return new self($celsius);
+    }
+
     /**
      * Convert from Celsius to Fahrenheit
      *

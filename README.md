@@ -52,8 +52,16 @@ php artisan vendor:publish --tag="unit-conversion-views"
 ## Usage
 
 ```php
-$unitConversion = new NehalPatel\UnitConversion();
-echo $unitConversion->echoPhrase('Hello, NehalPatel!');
+use NehalPatel\UnitConversion\Temperature\Celsius;
+use NehalPatel\UnitConversion\Temperature\Fahrenheit;
+
+//convert from Celsius to Fahrenheit
+UnitConversion::from(new Celsius(30))->toFahrenheit()->convert();
+Celsius::from(20)->toFahrenheit()->convert();
+
+//convert from Fahrenheit to Celsius
+UnitConversion::from(new Fahrenheit(68))->toCelsius()->convert();
+Fahrenheit::from(68)->toCelsius()->convert();
 ```
 
 ## Testing
