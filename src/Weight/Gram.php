@@ -14,7 +14,7 @@ class Gram extends WeightConverter implements Convertable
         $this->gram = $gram;
     }
 
-    public static function from(float $gram): Kilogram
+    public static function from(float $gram): Gram
     {
         return new self($gram);
     }

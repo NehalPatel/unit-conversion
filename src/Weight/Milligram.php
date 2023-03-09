@@ -14,7 +14,7 @@ class Milligram extends WeightConverter implements Convertable
         $this->milligram = $milligram;
     }
 
-    public static function from(float $milligram): Kilogram
+    public static function from(float $milligram): Milligram
     {
         return new self($milligram);
     }

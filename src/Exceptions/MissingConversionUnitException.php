@@ -3,6 +3,7 @@
 namespace NehalPatel\UnitConversion\Exceptions;
 
 use Exception;
+use Throwable;
 
 class MissingConversionUnitException extends Exception
 {
