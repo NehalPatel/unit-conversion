@@ -8,6 +8,12 @@ use NehalPatel\UnitConversion\Weight\Kilogram;
 //     $this->kilogram = new Kilogram(10);
 // });
 
+it('throws an exception when parameter is not numerical', function () {
+    expect(function () {
+        $kilogram = new Kilogram('test');
+    })->toThrow(TypeError::class);
+});
+
 //10Kg to 10000G
 it('can convert Kilogram to Gram', function () {
     $kilogram = new Kilogram(10);
@@ -43,4 +49,10 @@ it('can convert Kilogram to Pound', function () {
 it('can convert Kilogram to Ounce', function () {
     $kilogram = new Kilogram(10);
     expect(round($kilogram->toOunce()->convert(), 4))->toEqual(352.7396);
+});
+
+//double conversion test case
+it('can convert Kilogram to Gram and Ounce', function () {
+    $kilogram = new Kilogram(1);
+    expect(round($kilogram->toGram()->toOunce()->convert(), 4))->toEqual(35.2740);
 });
