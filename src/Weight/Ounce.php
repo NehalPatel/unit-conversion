@@ -14,7 +14,7 @@ class Ounce extends WeightConverter implements Convertable
         $this->ounce = $ounce;
     }
 
-    public static function from(float $ounce): Pound
+    public static function from(float $ounce): Ounce
     {
         return new self($ounce);
     }
