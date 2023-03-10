@@ -37,7 +37,6 @@ it('can convert Kilometer to Inch', function () {
     expect(round($kilometer->toInch()->convert(), 4))->toEqual(393701);
 });
 
-
 //use function Pest\Faker\faker;
 //
 //test('it can convert Kilometer to Foot', function () {
