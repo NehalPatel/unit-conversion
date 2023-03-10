@@ -5,18 +5,18 @@ namespace NehalPatel\UnitConversion\Weight;
 use NehalPatel\UnitConversion\Convertable;
 use NehalPatel\UnitConversion\Exceptions\MissingConversionUnitException;
 
-class Pound extends WeightConverter implements Convertable
+class Ounce extends WeightConverter implements Convertable
 {
-    private float $pound;
+    private float $ounce;
 
-    public function __construct(float $pound)
+    public function __construct(float $ounce)
     {
-        $this->pound = $pound;
+        $this->ounce = $ounce;
     }
 
-    public static function from(float $pound): Pound
+    public static function from(float $ounce): Pound
     {
-        return new self($pound);
+        return new self($ounce);
     }
 
     /**
@@ -28,11 +28,11 @@ class Pound extends WeightConverter implements Convertable
      */
     public function toKilogram(): self
     {
-        if (! isset($this->pound)) {
+        if (! isset($this->ounce)) {
             throw new MissingConversionUnitException();
         }
 
-        $this->weight = $this->pound / 2.205;
+        $this->weight = $this->ounce / 35.274;
 
         return $this;
     }
@@ -46,11 +46,11 @@ class Pound extends WeightConverter implements Convertable
      */
     public function toGram(): self
     {
-        if (! isset($this->pound)) {
+        if (! isset($this->ounce)) {
             throw new MissingConversionUnitException();
         }
 
-        $this->weight = $this->pound * 453.59237;
+        $this->weight = $this->ounce * 28.3495;
 
         return $this;
     }
@@ -64,11 +64,11 @@ class Pound extends WeightConverter implements Convertable
      */
     public function toMilligram(): self
     {
-        if (! isset($this->pound)) {
+        if (! isset($this->ounce)) {
             throw new MissingConversionUnitException();
         }
 
-        $this->weight = $this->pound * 453592.37;
+        $this->weight = $this->ounce * 28349.5;
 
         return $this;
     }
@@ -82,11 +82,11 @@ class Pound extends WeightConverter implements Convertable
      */
     public function toShortTon(): self
     {
-        if (! isset($this->pound)) {
+        if (! isset($this->ounce)) {
             throw new MissingConversionUnitException();
         }
 
-        $this->weight = $this->pound / 2240;
+        $this->weight = $this->ounce / 32000;
 
         return $this;
     }
@@ -100,11 +100,11 @@ class Pound extends WeightConverter implements Convertable
      */
     public function toLongTon(): self
     {
-        if (! isset($this->pound)) {
+        if (! isset($this->ounce)) {
             throw new MissingConversionUnitException();
         }
 
-        $this->weight = $this->pound / 2240;
+        $this->weight = $this->ounce / 35840;
 
         return $this;
     }
@@ -118,11 +118,29 @@ class Pound extends WeightConverter implements Convertable
      */
     public function toMatricTon(): self
     {
-        if (! isset($this->pound)) {
+        if (! isset($this->ounce)) {
             throw new MissingConversionUnitException();
         }
 
-        $this->weight = $this->pound / 2204.62;
+        $this->weight = $this->ounce / 35273.962;
+
+        return $this;
+    }
+
+    /**
+     * Convert from Pound to Pound
+     *
+     * @return $this
+     *
+     * @throws MissingConversionUnitException
+     */
+    public function toPound(): self
+    {
+        if (! isset($this->ounce)) {
+            throw new MissingConversionUnitException();
+        }
+
+        $this->weight = $this->ounce / 16;
 
         return $this;
     }
@@ -136,11 +154,11 @@ class Pound extends WeightConverter implements Convertable
      */
     public function toOunce(): self
     {
-        if (! isset($this->pound)) {
+        if (! isset($this->ounce)) {
             throw new MissingConversionUnitException();
         }
 
-        $this->weight = $this->pound * 16;
+        $this->weight = $this->ounce * 16;
 
         return $this;
     }
