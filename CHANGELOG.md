@@ -2,6 +2,9 @@
 
 All notable changes to `unit-conversion` will be documented in this file.
 
+## 1.3.0 - 2023-03-07
+- Length Conversion classes added
+ 
 ## 1.2.0 - 2023-03-07
 - All weight classes added with test cases.
 
